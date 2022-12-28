@@ -50,7 +50,7 @@ header{
     box-shadow: 20px 10px 20px #b1a55d;
     margin: 20px;
     margin-left: 33px;
-    background-color: #FFDB89;
+    background:linear-gradient(to bottom, white,#FFDB89);
     border-radius: 10px;
     display: inline-flex;
     flex-wrap: wrap;
