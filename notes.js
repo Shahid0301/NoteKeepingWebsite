@@ -42,7 +42,10 @@ delbtn.addEventListener("click",()=>{
     main.innerHTML=text;
     TextA.classList.add("hide");
     }
-    
+    if(date){
+        note.querySelector(".date").innerHTML=date;
+        note.querySelector(".date").classList.remove("hide");
+    }
     //edit toggle
     TextA.addEventListener("keypress",(event)=>{
         if(event.key==="Enter"){
