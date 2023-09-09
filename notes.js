@@ -14,7 +14,20 @@ const updateLS=()=>{
     localStorage.setItem('note',JSON.stringify(noteD));
     localStorage.setItem('date',JSON.stringify(dateArr));
 }
+const checkEmpty=()=>{
+    let headsec=document.querySelector(".head-section");
+    const mainsec=document.querySelector(".main-section");
+    if(headsec.innerHTML!==""){
+        mainsec.classList.add('hide');
+        headsec.classList.add('min');
+    }
+    else{
+       mainsec.classList.remove('hide');
+       headsec.classList.remove('min');
+    }
+}
 const addNewNote=(text='',date='')=>{
+
     const note=document.createElement('div');
     note.classList.add('note');
     const innerHtm=`<div class="operation">
@@ -29,6 +42,7 @@ const addNewNote=(text='',date='')=>{
     const delbtn=note.querySelector(".delete");
 delbtn.addEventListener("click",()=>{
     note.remove();
+    checkEmpty();
     updateLS();
 });
           
@@ -67,8 +81,9 @@ delbtn.addEventListener("click",()=>{
             TextA.classList.remove("hide");
             main.classList.add("hide");
     });
-
-    document.body.appendChild(note);
+    let noted=document.querySelector(".head-section")
+    noted.appendChild(note);
+    checkEmpty();
 };
 const noteBack=JSON.parse(localStorage.getItem('note'));
 const dateBack=JSON.parse(localStorage.getItem('date'));
@@ -82,6 +97,7 @@ if(noteBack){
     }
 
 }
+
 
 addbtn.addEventListener("click",()=>addNewNote());
 
