@@ -233,4 +233,7 @@ header{
         position: relative;
         right: 50px;
        }
+           .date{
+        margin-right: 8%;
+       }
 }
