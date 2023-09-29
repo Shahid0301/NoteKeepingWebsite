@@ -1,16 +1,18 @@
 
 body{
     margin: 30px 10%;
-    background-color: #EEEEEE;}
+    background-color: #F1EFEF;
+    
+}
 header{
-    background-color:rgb(11, 87, 134) ;
+    background-color:#CCC8AA ;
     color: rgb(255, 255, 255);
     border: 2px solid rgb(255, 255, 255);
     border-radius: 10px;
-    padding: 0 50px;
+    padding: 10px 50px;
     text-align: center;
     height: 60px;
-    box-shadow: 20px 10px 20px #BAD7E9;
+    box-shadow: 5px 5px 10px  #000000;
     font-size:larger;
 }
 .addNotebtn{
@@ -32,13 +34,17 @@ header{
        color: white;
    }
 .head-section{
-    margin-top: 5%;
+    margin-top: 5%; 
     border-radius: 10px;
     background-color: rgba(128, 128, 128, 0.279) ;
-    
+    box-shadow: 5px 5px 20px  #000000;
+/*     
+    flex-wrap: wrap;
+    display: flex; */
+    /* min-height: 70vh; */
 }
 .min{
-    min-height: 63vh;
+    min-height: 70vh;
 }
 .main-section{
     margin-top: 5%;
@@ -47,10 +53,13 @@ header{
     justify-content: center;
     background-color: rgba(128, 128, 128, 0.279) ;
     border-radius: 10px;
+    box-shadow: 5px 5px 20px  #000000;
+    height:70vh;
 }
 .main-section img{
     opacity: 0.8;
     width: 30vw;
+    filter: drop-shadow(5px 5px 5px black);
 }
 .main-section p{
     color: white;
@@ -75,9 +84,8 @@ header{
     width: 27%;
     height:40%;
     box-shadow: 20px 10px 20px #625f5f;
-    margin: 20px;
-    margin-left: 33px;
-    background-color:rgb(11, 87, 134);
+    margin:20px 0px 20px 4%;
+    background-color:#CCC8AA;
     /* background:linear-gradient(to top, rgb(150, 142, 142),#FAF0E6); */
     border-radius: 10px;
     display: inline-flex;
@@ -148,7 +156,7 @@ header{
     display: inline-block;
     
    margin:10px;   
-   margin-left:53%;
+   margin-left:50%;
     color: #857a19;
     font-size: smaller;
     /* padding: 5px; */
@@ -157,39 +165,72 @@ header{
    border-radius: 4px;
     
 }
+@media screen and (min-width:501px)and (max-width:1023px) {
+    .addNotebtn{
+        margin-left: 60%;
+        padding:1px 2px;
+        font-size: larger;
+       }
+       .operation{
+        margin-left: 5vw;
+       }
+    .head-section{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
 
-@media screen and (max-width:425px) {
-    body{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
     }
-   .addNotebtn{
-    margin-left: 30%;
-    padding:5px 8px;
-    font-size: larger;
-   }
-   .note{
-    display:inline-block;
-    width: 91%;
-    margin-left: 3%;
-   }
-
-
-   .main-section{
-    height:60vh;
-   }
-   .main-section img{
-    width: 80%;
-    position:fixed;
-    right:110px;
-   }
-   .main-section p{
-    margin-left: 40%;
-    width: 10%;
-   }
-   
-
-
-    
+    .head-section .note{
+      width: 60vw;
+      height:45vh;
+      box-shadow: none;
+      margin:30px;
+    }
+    .head-section .note .main{
+        height:26vh ;
+    }
+    #text{
+        height:26vh ;
+        margin: 29px;
+    }
+    .date{
+        margin:33px;
+        top: 10px;
+        margin-left: -100px;
+    }
+    .main-section img{
+        width: 70%;
+        /* position:fixed; */
+        right:50px;
+        text-align: right;
+       }
+       .main-section p{
+        position: relative;
+        right: 50px;
+       }
+}
+@media screen and (min-width:320px) and (max-width:500px) {
+    .addNotebtn{
+        margin-left: 24%;
+        padding:1px 2px;
+        font-size: larger;
+       }
+       .note{
+        /* display:inline-block; */
+        width: 91%;
+        height: 35vh;
+        margin-left: 3%;
+        
+       }
+       .main-section img{
+        width: 100%;
+        /* position:fixed; */
+        right:50px;
+        text-align: right;
+       }
+       .main-section p{
+        position: relative;
+        right: 50px;
+       }
 }
